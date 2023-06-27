@@ -1,0 +1,26 @@
+.tittle_welcome_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  min-width: 320px;
+  height: auto;
+  /* margin-bottom: 10px; */
+  margin: 20px auto;
+  padding: 0.1rem;
+  /* border: 1px solid white; */
+}
+
+.tittle_welcome_container img {
+  width: 40px;
+  height: 60px;
+  margin-right: 10px;
+}
+
+.tittle_welcome_container h1 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  color: #ffffff;
+}

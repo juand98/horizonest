@@ -1,0 +1,44 @@
+.container {
+  width: 100%;
+  height: auto;
+  background-color: #201e1c;
+}
+
+/*Espacio para cambiar el estilo del titulo*/
+
+.text-container {
+  width: 90%;
+  height: auto;
+  margin: 40px auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* margin-bottom: 30px; */
+  /* border: 1px solid green; */
+}
+
+.text-container .text-container__ask {
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 2.6rem;
+  color: #fc3d3d;
+}
+
+.text-container .text-container__esp {
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 2.6rem;
+  color: #fc3d3d;
+}
+
+.form-container {
+  width: 50%;
+  height: auto;
+  margin: 10px auto;
+}
+
+.vertical-scroll-select {
+  overflow-y: auto;
+}
