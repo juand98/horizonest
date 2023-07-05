@@ -1,0 +1,110 @@
+.main-container{
+    /* margin: auto; */
+    align-items: center;
+    background-color: black;
+    /* height: 100vh;
+    width: 100vw; */
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 25px;
+    padding-bottom: 15px;
+}
+.memory-img{
+    width: 250px;
+}
+.memory-img--celular{
+    width: 130px;
+    height: 50px;
+}
+.memory-section{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    /* border: 1px solid white; */
+    width: 350px;
+}
+.img-section{
+    width: 300px;
+    display: flex;
+    /* flex-direction: column; */
+    /* column-gap: 45px; */
+    /* gap: 10px; */
+    margin-bottom: 15px;
+}
+p{
+    font-size: 16px;
+    font-weight: 300;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* padding-left: 15px; */
+    width: 270px;
+    /* border: 1px solid white; */
+    height: 100%;
+}
+.memories-description{
+    padding-left: 15px;
+    border-left: 1px solid white;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    /* border: 1px solid white; */
+    /* width: 250px; */
+}
+.info-carrusel{
+    /* display: flex;
+    flex-direction: column; */
+    /* border: 1px solid white; */
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    /* background-color: aqua; */
+}
+.memory-capacity{
+    font-size: 30px;
+}
+.memory-reference{
+    font-weight: 600;
+}
+.carrusel{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    /* border: 1px solid white; */
+    display: flex;
+    overflow: hidden;
+    border-radius: 15px;
+    user-select: none;
+}
+.carrusel-button{
+    color: white;
+    background-color: black;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    /* top: 20px;
+    left: 50px; */
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.carrusel-button-left{
+    top: 110px;
+    left: 10px;
+}
+.carrusel-button-right{
+    top: 110px;
+    right: 10px;
+}
+/* .carrusel-image{
+    width: 300px;
+} */

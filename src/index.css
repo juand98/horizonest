@@ -1,35 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 html {
   font-size: 62.5%;
   font-family: "Montserrat", sans-serif;
 }
-
+.main-container-root{
+  background-color: black;
+  height: 100vh;
+  /* border: 1px solid white; */
+}
 .body_container {
-  width: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  min-width: 350px;
+  max-width: 100vh;
+  margin: auto;
+  padding: 20px;
+  /* width: 100%;
   min-width: 320px;
   height: auto;
   padding-top: 2.5rem;
   padding-bottom: 70px;
   background-color: #201e1c;
-  color: #ffffff;
+  color: #ffffff; */
+  /* border: 1px solid white; */
 }
 
 .body_container p {
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
-  font-size: 1.4rem;
+  /* margin-top: 2.5rem; */
+  /* margin-bottom: 2.5rem; */
+  /* font-size: 1.4rem; */
   font-weight: 500;
-  line-height: 1.8rem;
+  /* line-height: 1.8rem; */
   text-align: center;
+  font-size: 22px;
   color: #ffffff;
+  /* border: 1px solid white; */
+  margin: 15px auto;
+  width: 240px
 }
 
 .body_container .cards_container {
-  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* border: 1px solid white; */
+  margin: auto;
+  gap: 15px;
+  /* max-width: 380px; */
+  /* width: 100%;
   min-width: 320px;
   max-width: 500px;
   margin: 0 auto;
@@ -37,18 +61,19 @@ html {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 1rem;
+  padding: 1rem; */
   /* border: 1px solid white; */
 }
 
 .info_container {
-  width: 135px;
-  height: 135px;
-  max-width: 135px;
-  margin: 15px auto;
+  width: 125px;
+  /* height: 135px; */
+  /* max-width: 135px; */
+  /* margin: 15px auto; */
   /* padding: 15px; */
-  background-color: #282623;
+  /* background-color: green; */
   border-radius: 5px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16);
+  /* overflow: hidden; */
   /* border: 1px solid white; */
 }

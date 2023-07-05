@@ -1,8 +1,11 @@
 import { createContext } from "react";
 
 const context = createContext({
-  cantidad: null,
-  calidad: null,
+  cantidadCanciones: null,
+  calidadCanciones: null,
+  cantidadVideos: null,
+  calidadVideos: null,
+  reproductorVideojuegos: null,
 });
 
 export default context;
