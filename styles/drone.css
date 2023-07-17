@@ -1,0 +1,36 @@
+.drone-info-container{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+    gap: 20px;
+}
+.drone-memory-img__container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.drone-memory-img{
+    width: 200px;
+}
+.drone-description{
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+}
+.drone-description-text{
+    width: 180px;
+    margin-bottom: 10px;
+}
+.drone-capacity{
+    display: flex;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+.drone-capacity img{
+    height: 40px;
+}
+.memory-reference-drone{
+    font-weight: 600;
+    font-size: 14px;
+}

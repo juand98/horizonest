@@ -13,6 +13,8 @@ const Memory2 = () => {
   const [memory, setMemory] = useState(undefined);
   const [carrusel, setCarrusel]= useState(1);
 
+  const [selectedThumbanil, setSelectedThumbnail]= useState("1");
+
 
   const qualityFunctions = {
     "1080P": (array, cantidad) => array.find(e => parseInt(e[1]['1080P']) >= cantidad),
@@ -53,15 +55,34 @@ const Memory2 = () => {
     }
   };
 
+  const handleThumbnail= (e)=>{
+    console.log(e.target);
+    if(e.target.id == 'thumbnail1'){
+      setSelectedThumbnail("1");
+    }else if(e.target.id == 'thumbnail2'){
+      setSelectedThumbnail("2");
+    }else if(e.target.id == 'thumbnail3'){
+      setSelectedThumbnail("3");
+    }
+  };
+
   if(memory != undefined){
     return (
       <div className='container'>
         <Header/>
+        <Tittle_welcome text= "Memorias para almacenamiento de video" img='/iconos/video.svg'/>
         <main className='main-container'>
-          <Tittle_welcome text= "Memorias para almacenamiento de video"/>
+          <section className="galeria">
+            <div className="galeria-thumbnails">
+              <img onClick={handleThumbnail} id='thumbnail1' src="/video/thumbnails/1.jpg" alt="" className={selectedThumbanil== '1' ? 'galeria-thumbnail thumbnail-selected' : 'galeria-thumbnail'} />
+              <img onClick={handleThumbnail} id='thumbnail2' src="/video/thumbnails/2.jpg" alt="" className={selectedThumbanil== '2' ? 'galeria-thumbnail thumbnail-selected' : 'galeria-thumbnail'} />
+              <img onClick={handleThumbnail} id='thumbnail3' src="/video/thumbnails/3.jpg" alt="" className={selectedThumbanil== '3' ? 'galeria-thumbnail thumbnail-selected' : 'galeria-thumbnail'} />
+            </div>
+            <img src={`/video/${selectedThumbanil}.jpg`} alt="" className="galeria-img" />
+          </section>
           <section className="memory-section">
               <div className="img">
-                  <img className='memory-img' src={`../src/assets/capacidades/${memory}.svg`} alt="" />
+                  <img className='memory-img' src={`/capacidades/${memory}.svg`} alt="" />
               </div>
               <div className="info-carrusel">
                 <div className="info">
@@ -71,7 +92,7 @@ const Memory2 = () => {
                 </div>
                 <div className="carrusel">
                   <AiFillCaretLeft onClick={handlePrev} className='carrusel-button-left carrusel-button'/>
-                  <img className='carrusel-image' src={`../src/assets/video/${carrusel.toString()}.jpg`} alt="" />
+                  <img className='carrusel-image' src={`/video/${carrusel.toString()}.jpg`} alt="" />
                   <AiFillCaretRight onClick={handleNext} className='carrusel-button-right carrusel-button'/>
                 </div>
               </div>
@@ -82,7 +103,7 @@ const Memory2 = () => {
   }else{
     return (
         <main className='main-container'>
-          <Tittle_welcome text= "Memorias para almacenamiento de música"/>
+          <Tittle_welcome text= "Memorias para almacenamiento de música" img='/iconos/video.svg'/>
           <div>ERROR VIDEO</div>
         </main>
     )

@@ -16,23 +16,24 @@ const Root = () => {
         <main className="main-container-root">
           <Header />
           <div className="body_container">
-            <Tittle_welcome text="Bienvenido"></Tittle_welcome>
-            <p>¿Para que necesitas tú memoria?</p>
+            {/* <Tittle_welcome text="Bienvenido" img='/iconos/blanco.svg'/> */}
+            <img className='home-logo' src="/logo_horizone_blanco.svg" alt="" />
+            <p className="question">¿Para qué necesitas tu memoria?</p>
             <section className="cards_container">
               <Link className="info_container" to="/musica">
-                <Card img="../src/assets/1_BOTON_MUSICA_OVERD.svg"></Card>
+                <Card img="/1_BOTON_MUSICA_OVERD.svg"></Card>
               </Link>
               <Link className="info_container" to="/video">
-                <Card img="../src/assets/2_BOTON_VIDEO_OVERD.svg"></Card>
+                <Card img="/2_BOTON_VIDEO_OVERD.svg"></Card>
               </Link>
               <Link className="info_container" to="/celular">
-                <Card img="../src/assets/3_BOTON_CELULAR_OVERD.svg"></Card>
+                <Card img="/3_BOTON_CELULAR_OVERD.svg"></Card>
               </Link>
-              <Link className="info_container" to="/musica">
-                <Card img="../src/assets/4_BOTON_VIDEOJUEGOS_OVERD.svg"></Card>
+              <Link className="info_container" to="/videojuegos">
+                <Card img="/4_BOTON_VIDEOJUEGOS_OVERD.svg"></Card>
               </Link>
-              <Link className="info_container" to="/musica">
-                <Card img="../src/assets/5_BOTON_FOTOGRAFIA_OVERD.svg"></Card>
+              <Link className="info_container" to="/camaras">
+                <Card img="/5_BOTON_FOTOGRAFIA_OVERD.svg"></Card>
               </Link>
             </section>
           </div>

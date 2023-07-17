@@ -14,7 +14,6 @@ const Celular = () => {
 
   useEffect(()=>{
     data.reproductorVideojuegos= esReproductor;
-    console.log('render');
   });
 
   const handleSelect = (e)=>{
@@ -36,8 +35,8 @@ const Celular = () => {
   return(
     <div className="container">
       <Header />
+      <Tittle_welcome text="Memorias para celular o tablet" img='/iconos/celular.svg'/>
       <form>
-        <Tittle_welcome text="Memorias para celular o tablet" />
         <article className="question">
           <section className="text-container">
             <label htmlFor="canciones" className="text-container__ask">
@@ -55,12 +54,11 @@ const Celular = () => {
             </select>
           </section>
         </article>
-
-        <Link to="/memoria-celular" className="button_container" onClick={handleSubmit}>
+      </form>
+      <Link className="button_container" onClick={handleSubmit}>
           <AiOutlineSearch className="button-icon"/>
           <button type="submit">Encuentra mi memoria ideal</button>
         </Link>
-      </form>
     </div>
   )
 }

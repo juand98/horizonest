@@ -12,6 +12,7 @@ const Memory1 = () => {
   const [memory, setMemory] = useState(undefined);
   const [carrusel, setCarrusel]= useState(1);
 
+  const [selectedThumbanil, setSelectedThumbnail]= useState("1");
  
 
   const qualityFunctions = {
@@ -53,15 +54,34 @@ const Memory1 = () => {
     }
   };
 
+  const handleThumbnail= (e)=>{
+    console.log(e.target);
+    if(e.target.id == 'thumbnail1'){
+      setSelectedThumbnail("1");
+    }else if(e.target.id == 'thumbnail2'){;
+      setSelectedThumbnail("2");
+    }else if(e.target.id == 'thumbnail3'){
+      setSelectedThumbnail("3");
+    }
+  };
+
   if(memory != undefined){
     return (
     <div className='container'>
       <Header/>
+      <Tittle_welcome text= "Memorias para almacenamiento de Música" img='/iconos/musica.svg'/>
         <main className='main-container'>
-          <Tittle_welcome text= "Memorias para almacenamiento de Música."/>
+          <section className="galeria">
+            <div className="galeria-thumbnails">
+              <img onClick={handleThumbnail} id='thumbnail1' src="/music/thumbnails/1.jpg" alt="" className={selectedThumbanil== '1' ? 'galeria-thumbnail thumbnail-selected' : 'galeria-thumbnail'} />
+              <img onClick={handleThumbnail} id='thumbnail2' src="/music/thumbnails/2.jpg" alt="" className={selectedThumbanil== '2' ? 'galeria-thumbnail thumbnail-selected' : 'galeria-thumbnail'} />
+              <img onClick={handleThumbnail} id='thumbnail3' src="/music/thumbnails/3.jpg" alt="" className={selectedThumbanil== '3' ? 'galeria-thumbnail thumbnail-selected' : 'galeria-thumbnail'} />
+            </div>
+            <img src={`/music/${selectedThumbanil}.jpg`} alt="" className="galeria-img" />
+          </section>
           <section className="memory-section">
               <div className="img">
-                  <img className='memory-img' src={`../src/assets/capacidades/${memory}.svg`} alt="" />
+                  <img className='memory-img' src={`/capacidades/${memory}.svg`} alt="" />
               </div>
               <div className="info-carrusel">
                 <div className="info">
@@ -73,7 +93,7 @@ const Memory1 = () => {
                 </div>
                 <div className="carrusel">
                   <AiFillCaretLeft onClick={handlePrev} className='carrusel-button-left carrusel-button'/>
-                  <img className='carrusel-image' src={`../src/assets/music/${carrusel.toString()}.jpg`} alt="" />
+                  <img className='carrusel-image' src={`/music/${carrusel.toString()}.jpg`} alt="" />
                   <AiFillCaretRight onClick={handleNext} className='carrusel-button-right carrusel-button'/>
                 </div>
               </div>
@@ -85,7 +105,7 @@ const Memory1 = () => {
   }else{
     return (
         <main className='main-container'>
-          <Tittle_welcome text= "Memorias para almacenamiento de música"/>
+          <Tittle_welcome text= "Memorias para almacenamiento de música" img='/iconos/musica.svg'/>
           <div>ERROR</div>
         </main>
     )

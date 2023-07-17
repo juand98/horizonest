@@ -4,6 +4,9 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
+  color: white;
+  user-select: none;
+
 }
 html {
   font-size: 62.5%;
@@ -12,27 +15,20 @@ html {
 .main-container-root{
   background-color: black;
   height: 100vh;
-  /* border: 1px solid white; */
 }
 .body_container {
   background-color: black;
   display: flex;
   flex-direction: column;
+  align-items: center;
   min-width: 350px;
   max-width: 100vh;
   margin: auto;
   padding: 20px;
-  /* width: 100%;
-  min-width: 320px;
-  height: auto;
-  padding-top: 2.5rem;
-  padding-bottom: 70px;
-  background-color: #201e1c;
-  color: #ffffff; */
-  /* border: 1px solid white; */
+  gap: 10px;
 }
 
-.body_container p {
+.body_container .question {
   /* margin-top: 2.5rem; */
   /* margin-bottom: 2.5rem; */
   /* font-size: 1.4rem; */
@@ -43,26 +39,14 @@ html {
   color: #ffffff;
   /* border: 1px solid white; */
   margin: 15px auto;
-  width: 240px
+  width: 240px;
 }
 
 .body_container .cards_container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* border: 1px solid white; */
-  margin: auto;
   gap: 15px;
-  /* max-width: 380px; */
-  /* width: 100%;
-  min-width: 320px;
-  max-width: 500px;
-  margin: 0 auto;
-  height: auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 1rem; */
-  /* border: 1px solid white; */
+  justify-items: center;
 }
 
 .info_container {
@@ -74,6 +58,47 @@ html {
   /* background-color: green; */
   border-radius: 5px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16);
+  text-decoration: none;
+  color: white;
+  text-align: center;
   /* overflow: hidden; */
   /* border: 1px solid white; */
+}
+.body_container .cards_container__camaras {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  row-gap: 40px;
+  justify-items: center;
+}
+.home-logo{
+  width: 200px;
+}
+@media (min-width: 900px){
+  .home-logo{
+    width: 250px;
+  }
+  .body_container .question {
+    font-weight: 500;
+    text-align: center;
+    font-size: 25px;
+    color: #ffffff;
+    /* border: 1px solid white; */
+    margin: 15px auto;
+    width: 300px;
+  }
+  .body_container .cards_container {
+    display: flex;
+  }
+  .body_container {
+    margin: auto; 
+    height: 70%;
+    justify-content: center;
+    padding: 20px;
+    gap: 30px;
+    padding-bottom: 90px;
+  }
+  .body_container .cards_container__camaras {
+    display: flex;
+  }
 }

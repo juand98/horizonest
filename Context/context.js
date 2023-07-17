@@ -6,6 +6,14 @@ const context = createContext({
   cantidadVideos: null,
   calidadVideos: null,
   reproductorVideojuegos: null,
+  dronTipe: null,
+  dronName: null,
+  deportivaTipe: null,
+  deportivaName: null,
+  profesionalTipe: null,
+  profesionalName: null,
+  consolaVideojuegos: null,
+  cantidadVideojuegos: null,
 });
 
 export default context;

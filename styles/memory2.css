@@ -1,0 +1,136 @@
+.main-container-element{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: black;
+}
+.text-container-element{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 5px;
+}
+.text-container__ask-element, .text-container__ask-element-deportiva{
+    font-size: 20px;
+    width: 200px;
+    text-align: center;
+    font-weight: 600;
+}
+.acordion-section{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.acordion-item{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 95%;
+    color: white;
+}
+.acordion-title{
+    background-color: #649e;
+    height: 30px;
+    display: flex;
+    font-size: 18px;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    gap: 10px;
+    text-decoration: none;
+}
+.acordion-content, .acordionLink-content{
+    display: flex;
+    flex-direction: column;
+    background-color: #393734;
+    padding: 20px;
+    width: 100%;
+    gap: 15px;
+    border-radius: 0 0 10px 10px;
+    /* align-items: center; */
+}
+.acordion-img{
+    display: flex;
+    width: 100%;
+    height: 140px;
+    align-content: center;
+}
+.acordion-content__description{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /* border: 1px solid white; */
+}
+.acordion-content__text{
+    width: 79%;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 400;
+    /* border: 1px solid white; */
+}
+.acordion-content__capacity{
+    width: 80px;
+}
+.acordion-content__reference{
+    font-weight: 600;
+}
+.acordion-text{
+    font-weight: 600;
+}
+.carrusel-container__element{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.carrusel-element{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    overflow: hidden;
+    border-radius: 15px;
+    user-select: none;
+}
+.bold{
+    font-weight: 600;
+}
+.text-container__ask-element-deportiva{
+    width: 300px;
+}
+.acordionLink-item{
+    display: flex;
+    width: 100%;
+    height: 30px;
+    text-decoration: none;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 300;
+    align-items: center;
+    background-color: #5b5956;
+}
+.acordionLink-content{
+    padding: 10px 20px;
+    gap: 5px;
+}
+@media (min-width: 900px){
+    .carrusel-container__element, .text-container-element{
+        display: none;
+    }
+    .main-container-element{
+        flex-direction: row;
+        justify-content: center;
+    }
+    .acordion-section{
+        padding-top: 5px;
+        width: 100%;
+        max-width: 450px;
+        height: fit-content;
+    }
+}

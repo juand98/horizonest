@@ -1,0 +1,32 @@
+{
+    "PSP": {
+      "24 a 48 juegos": false,
+      "48 a 96 juegos": "Video Games 32gb",
+      "96 a 190 juegos": "Video Games 64gb"
+    },
+    "PSP Go": {
+      "24 a 48 juegos": false,
+      "48 a 96 juegos": "Video Games 32gb",
+      "96 a 190 juegos": "Video Games 64gb"
+    },
+    "PSVITA": {
+      "24 a 48 juegos": "Video Games 64gb",
+      "48 a 96 juegos": "Pro 128gb",
+      "96 a 190 juegos": false
+    },
+    "Nintendo 3DS": {
+      "8 a 16 juegos": false,
+      "16 a 32 juegos": "Video Games 32gb",
+      "32 a 64 juegos": "Video Games 64gb"
+    },
+    "Nintendo Switch": {
+      "8 a 16 juegos": "Pro 64gb",
+      "16 a 32 juegos": "Pro 128gb",
+      "32 a 64 juegos": "Pro 256gb"
+    },
+    "PS2": {
+      "8 a 16 juegos": false,
+      "16 a 32 juegos": "Video Games 32gb",
+      "32 a 64 juegos": "Video Games 64gb"
+    }
+}

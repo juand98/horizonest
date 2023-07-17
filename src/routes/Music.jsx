@@ -40,8 +40,8 @@ const Music = () => {
   return (
     <div className="container">
       <Header />
-      <form>
-        <Tittle_welcome text="Memorias para Almacenamiento de Música" />
+      <Tittle_welcome text="Memorias para Almacenamiento de Música" img='/iconos/musica.svg'/>
+      <form className="form">
         <article className="question">
           <section className="text-container">
             <label htmlFor="canciones" className="text-container__ask">
@@ -88,12 +88,11 @@ const Music = () => {
             </select>
           </section>
         </article>
-
-        <Link to="/memoria-musica" className="button_container" onClick={handleSubmit}>
+      </form>
+      <Link to="/memoria-musica" className="button_container" onClick={handleSubmit}>
           <AiOutlineSearch className="button-icon"/>
           <button type="submit">Encuentra mi memoria ideal</button>
-        </Link>
-      </form>
+      </Link>
     </div>
   );
 };

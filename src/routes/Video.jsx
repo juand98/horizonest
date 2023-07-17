@@ -42,8 +42,8 @@ const Video = () => {
   return (
     <div className="container">
       <Header />
+      <Tittle_welcome text="Memorias para Almacenamiento de Video" img='/iconos/video.svg'/>
       <form>
-        <Tittle_welcome text="Memorias para Almacenamiento de Video" />
         <article className="question">
           <section className="text-container">
             <label htmlFor="videos" className="text-container__ask">
@@ -90,12 +90,11 @@ const Video = () => {
             </select>
           </section>
         </article>
-
-        <Link to="/memoria-video" className="button_container" onClick={handleSubmit}>
+      </form>
+      <Link to="/memoria-video" className="button_container" onClick={handleSubmit}>
           <AiOutlineSearch className="button-icon"/>
           <button type="submit">Encuentra mi memoria ideal</button>
         </Link>
-      </form>
     </div>
   )
 };

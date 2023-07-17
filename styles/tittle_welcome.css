@@ -24,3 +24,13 @@
   line-height: 20px;
   color: #ffffff;
 }
+@media (min-width: 900px){
+  .tittle_welcome_container img {
+    width: 60px;
+    height: 80px;
+    margin-right: 10px;
+  }
+  .tittle_welcome_container h1 {
+    font-size: 23px;
+  }
+}
