@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import useData from '../../Hooks/useData';
+import useData from '../Hooks/useData';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import Header from '../../components/Header';
-import Tittle_welcome from '../../components/Tittle_welcome';
+import Header from '../components/Header';
+import Tittle_welcome from '../components/Tittle_welcome';
 import { AiOutlineSearch } from "react-icons/ai";
 
 

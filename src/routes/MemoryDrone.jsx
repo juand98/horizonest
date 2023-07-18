@@ -1,10 +1,10 @@
 import React from 'react'
 import { useState } from 'react';
-import useData from '../../Hooks/useData';
-import Header from '../../components/Header'
-import CintaDescripcion from '../../components/CintaDescripcion';
-import Tittle_welcome from '../../components/Tittle_welcome';
-import '../../styles/drone.css'
+import useData from '../Hooks/useData';
+import Header from '../components/Header'
+import CintaDescripcion from '../components/CintaDescripcion';
+import Tittle_welcome from '../components/Tittle_welcome';
+import '../styles/drone.css'
 import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
 
 

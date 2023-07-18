@@ -1,11 +1,11 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-import useData from '../../Hooks/useData';
+import useData from '../Hooks/useData';
 import { Link, useNavigate } from 'react-router-dom';
-import CintaDescripcion from '../../components/CintaDescripcion'
+import CintaDescripcion from '../components/CintaDescripcion'
 import { AiOutlineSearch } from "react-icons/ai";
-import Header from '../../components/Header';
-import Tittle_welcome from '../../components/Tittle_welcome';
+import Header from '../components/Header';
+import Tittle_welcome from '../components/Tittle_welcome';
 
 const Drones = () => {
   const [droneTipe, setDroneTipe]= useState(null);

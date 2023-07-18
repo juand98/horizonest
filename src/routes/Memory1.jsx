@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import useData from '../../Hooks/useData'
-import useGetInformation from '../../Hooks/useGetinformation';
-import Tittle_welcome from '../../components/Tittle_welcome';
-import "../../styles/memory1.css";
-import Header from '../../components/Header';
+import useData from '../Hooks/useData'
+import useGetInformation from '../Hooks/useGetinformation';
+import Tittle_welcome from '../components/Tittle_welcome';
+import "../styles/memory1.css";
+import Header from '../components/Header';
 import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
 
 const Memory1 = () => {

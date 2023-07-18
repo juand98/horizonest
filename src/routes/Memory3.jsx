@@ -1,9 +1,9 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
-import Tittle_welcome from '../../components/Tittle_welcome'
-import useData from '../../Hooks/useData'
-import "../../styles/memory1.css";
-import Header from '../../components/Header';
+import Tittle_welcome from '../components/Tittle_welcome'
+import useData from '../Hooks/useData'
+import "../styles/memory1.css";
+import Header from '../components/Header';
 import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
 
 

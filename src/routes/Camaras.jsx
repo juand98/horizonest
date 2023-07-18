@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Header from '../../components/Header'
-import Tittle_welcome from '../../components/Tittle_welcome'
-import CamaraCard from '../../components/CamaraCard'
+import Header from '../components/Header'
+import Tittle_welcome from '../components/Tittle_welcome'
+import CamaraCard from '../components/CamaraCard'
 
 const Camaras = () => {
   return (

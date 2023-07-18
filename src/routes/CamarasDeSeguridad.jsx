@@ -1,9 +1,9 @@
 import React from 'react';
 import { useState } from 'react';
-import CintaDescripcion from '../../components/CintaDescripcion';
-import Tittle_welcome from '../../components/Tittle_welcome';
-import '../../styles/memory2.css';
-import Header from '../../components/Header';
+import CintaDescripcion from '../components/CintaDescripcion';
+import Tittle_welcome from '../components/Tittle_welcome';
+import '../styles/memory2.css';
+import Header from '../components/Header';
 import { AiOutlineDown, AiOutlineRight, AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
 
 

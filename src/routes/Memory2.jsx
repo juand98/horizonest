@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import useData from '../../Hooks/useData'
-import useGetInformation from '../../Hooks/useGetinformation';
-import Tittle_welcome from '../../components/Tittle_welcome';
-import "../../styles/memory1.css";
+import useData from '../Hooks/useData'
+import useGetInformation from '../Hooks/useGetinformation';
+import Tittle_welcome from '../components/Tittle_welcome';
+import "../styles/memory1.css";
 import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
-import Header from '../../components/Header';
+import Header from '../components/Header';
 
 
 const Memory2 = () => {
