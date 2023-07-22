@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import useData from '../Hooks/useData'
-import useGetInformation from '../Hooks/useGetinformation';
+// import useGetInformation from '../Hooks/useGetinformation';
 import Tittle_welcome from '../components/Tittle_welcome';
 import "../styles/memory1.css";
 import Header from '../components/Header';
@@ -8,9 +8,41 @@ import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
 
 const MemoryVideojuegos = () => {
   const data = useData();
-  const jsonData = useGetInformation("../json/videojuegos.json");
+  const jsonData = {
+    "PSP": {
+      "24 a 48 juegos": false,
+      "48 a 96 juegos": "VG_32gb",
+      "96 a 190 juegos": "VG_64gb"
+    },
+    "PSP Go": {
+      "24 a 48 juegos": false,
+      "48 a 96 juegos": "VG_32gb",
+      "96 a 190 juegos": "VG_64gb"
+    },
+    "PSVITA": {
+      "24 a 48 juegos": "VG_64gb",
+      "48 a 96 juegos": "PRO_128gb",
+      "96 a 190 juegos": false
+    },
+    "Nintendo 3DS": {
+      "8 a 16 juegos": false,
+      "16 a 32 juegos": "VG_32gb",
+      "32 a 64 juegos": "VG_64gb"
+    },
+    "Nintendo Switch": {
+      "8 a 16 juegos": "PRO_64gb",
+      "16 a 32 juegos": "PRO_128gb",
+      "32 a 64 juegos": "PRO_256gb"
+    },
+    "PS2": {
+      "8 a 16 juegos": false,
+      "16 a 32 juegos": "VG_32gb",
+      "32 a 64 juegos": "VG_64gb"
+    }
+};
   const [memoria, setMemoria]= useState("");
   const [carrusel, setCarrusel]= useState(1);
+  const [memoriaNombre, setMemoriaNombre] = useState("");
 
   const [selectedThumbanil, setSelectedThumbnail]= useState("1");
 
@@ -29,6 +61,27 @@ const MemoryVideojuegos = () => {
         return;
     }
   }, [data, jsonData]);
+
+  useEffect(() => {
+    switch (memoria){
+      case "VG_32gb":
+        setMemoriaNombre("VIDEOGAME 32GB");
+        break;
+      case "VG_64gb":
+        setMemoriaNombre("VIDEOGAME 64GB");
+        break;
+      case "PRO_128gb":
+        setMemoriaNombre("PRO 128GB");
+        break;
+      case "PRO_64gb":
+        setMemoriaNombre("PRO 64GB");
+        break;
+      case "PRO_256gb":
+        setMemoriaNombre("PRO 256GB");
+        break;
+    }
+    
+  }, [memoria]);
 
   const handlePrev =()=>{
     if(carrusel == 1){
@@ -73,14 +126,14 @@ const MemoryVideojuegos = () => {
             </section>
               <section className="memory-section">
                   <div className="img">
-                      <img className='memory-img' src={`/capacidades/.svg`} alt={memoria} />
+                      <img className='memory-img' src={`/memorias/${memoria}.png`} alt={memoria} />
                   </div>
                   <div className="info-carrusel">
                     <div className="info">
-                        <p>{`La memoria ideal para almacenar de ${cantidad} en tu consola es la:`}</p>
+                        <p>{`La memoria ideal para almacenar de ${cantidad} en tu consola ${consola} es la:`}</p>
                         <div className="memory-data">
                           <p className='memory-capacity'></p>
-                          <p className='memory-reference'> HORIZONE {memoria.toUpperCase()}</p>
+                          <p className='memory-reference'> HORIZONE {memoriaNombre}</p>
                         </div>
                     </div>
                     <div className="carrusel">
@@ -95,9 +148,12 @@ const MemoryVideojuegos = () => {
       )
   }else{
     return (
-        <main className='main-container'>
-          <Tittle_welcome text= "Memorias para almacenamiento de música" img='/iconos/videojuegos.svg'/>
-          <div>ERROR</div>
+        <main className='container'>
+        <Header/>
+        <Tittle_welcome text= "Memorias para almacenamiento de música" img='/iconos/videojuegos.svg'/>
+        <div className="error-container">
+          <p className="error-text">Parece que ha ocurrido un error, vuelve a llenar el <a href='/videojuegos'>formulario</a>. Si el error persiste es porque no contamos con una memoria que se acomode a tus necesidades.</p>
+        </div>
         </main>
     )
   }

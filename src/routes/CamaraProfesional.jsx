@@ -6,20 +6,21 @@ import AcordionLink from '../components/AcordionLink'
 import AcordionLinkItem from '../components/AcordionLinkItem'
 
 const CamaraProfesional = () => {
+
   return (
     <div className='container'>
       <Header />
-      <div className="main-container-element">
-        <Tittle_welcome text='Memorias para Grabación de Video y Fotografía' img='/iconos/fotografia.svg'/>
-        <CintaDescripcion img='/camaras-logos/profesional-blanco.svg'
+      <Tittle_welcome text='Memorias para Grabación de Video y Fotografía' img='/iconos/fotografia.svg'/>
+      <CintaDescripcion img='/camaras-logos/profesional-blanco.svg'
                           text='Cámaras Profesionales'
-        />
+      />
+      <div className="main-container-element">
         <div className="text-container-element">
           <label className="text-container__ask-element-deportiva">
               Elige tu marca y modelo de cámara deportiva
           </label>
         </div>
-        <section className="acordion-section">
+        <section className="acordion-section acordion-section__tipe2">
           <AcordionLink title='SONY'>
             <AcordionLinkItem value='1' tipe='2' >Semi Profesional</AcordionLinkItem>
             <AcordionLinkItem value='2' tipe='2'>Alpha A6400</AcordionLinkItem>

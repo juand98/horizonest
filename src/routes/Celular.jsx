@@ -55,7 +55,7 @@ const Celular = () => {
           </section>
         </article>
       </form>
-      <Link className="button_container" onClick={handleSubmit}>
+      <Link className="button_container celular-button" onClick={handleSubmit}>
           <AiOutlineSearch className="button-icon"/>
           <button type="submit">Encuentra mi memoria ideal</button>
         </Link>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import useData from '../Hooks/useData'
-import useGetInformation from '../Hooks/useGetinformation';
+// import useGetInformation from '../Hooks/useGetinformation';
 import Tittle_welcome from '../components/Tittle_welcome';
 import "../styles/memory1.css";
 import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
@@ -9,7 +9,33 @@ import Header from '../components/Header';
 
 const Memory2 = () => {
   const data = useData();
-  const jsonData = useGetInformation("../json/videoJson.json");
+  const jsonData = {
+    "4gb": {
+      "1080P": "1",
+      "720P": "2",
+      "480P": "4"
+    },
+    "8gb": {
+      "1080P": "2",
+      "720P": "4",
+      "480P": "8"
+    },
+    "16gb": {
+      "1080P": "5",
+      "720P": "9",
+      "480P": "16"
+    },
+    "32gb": {
+      "1080P": "9",
+      "720P": "17",
+      "480P": "32"
+    },
+    "64gb": {
+      "1080P": "19",
+      "720P": "34",
+      "480P": "64"
+    }
+  };
   const [memory, setMemory] = useState(undefined);
   const [carrusel, setCarrusel]= useState(1);
 
@@ -82,12 +108,12 @@ const Memory2 = () => {
           </section>
           <section className="memory-section">
               <div className="img">
-                  <img className='memory-img' src={`/capacidades/${memory}.svg`} alt="" />
+                  <img className='memory-img' src={`/memorias/CL10_${memory}.png`} alt="" />
               </div>
               <div className="info-carrusel">
                 <div className="info">
                     <p>{`La memoria ideal para almacenar más de ${cantidad} videos en calidad ${calidad} es:`}</p>
-                    <p>{memory}</p>
+                    <img src={`/capacidades/${memory}.svg`} alt="" className="memory-capacity" />
                     <p>HORIZONE CLASS 10 / 2.0</p>
                 </div>
                 <div className="carrusel">
@@ -102,10 +128,13 @@ const Memory2 = () => {
     )
   }else{
     return (
-        <main className='main-container'>
-          <Tittle_welcome text= "Memorias para almacenamiento de música" img='/iconos/video.svg'/>
-          <div>ERROR VIDEO</div>
-        </main>
+      <main className='container'>
+      <Header/>
+      <Tittle_welcome text= "Memorias para almacenamiento de video" img='/iconos/video.svg'/>
+      <div className="error-container">
+        <p className="error-text">Parece que ha ocurrido un error, vuelve a llenar el <a href='/video'>formulario</a>. Si el error persiste es porque no contamos con una memoria que se acomode a tus necesidades.</p>
+      </div>
+    </main>
     )
   }
 

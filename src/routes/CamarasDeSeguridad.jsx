@@ -22,7 +22,7 @@ const AcordionItem = (props) => {
       </div>
       {isActive && 
       <div className="acordion-content">
-        <img className='acordion-img' src="/camaras-logos/vigilancia-blanco.svg" alt="" />
+        <img className='acordion-img' src={`/memorias/${props.memory}.png`} alt="" />
         <div className="acordion-content__description">
           <p className="acordion-content__text">La memoria ideal para grabar entre <span className='bold'>{props.dias} días</span> es:</p>
           <img src={`/capacidades/${props.gb}gb.svg`} alt="" className="acordion-content__capacity" />
@@ -85,9 +85,9 @@ const CamarasDeSeguridad = () => {
           </label>
           <p className="text-container__esp">(Aproximadamente)</p>
         </div>
-        <section className="acordion-section">
-          <AcordionItem title='14 A 16 DÍAS' dias='14 a 16' gb='32'/>
-          <AcordionItem title='28 A 30 DÍAS' dias='28 a 30' gb='64'/>
+        <section className="acordion-section acordion-section__seguridad">
+          <AcordionItem title='14 A 16 DÍAS' dias='14 a 16' gb='32' memory="CL10_32gb"/>
+          <AcordionItem title='28 A 30 DÍAS' dias='28 a 30' gb='64'memory="CL10_64gb"/>
         </section>
         <div className="carrusel-container__element">
           <div className="carrusel-element">

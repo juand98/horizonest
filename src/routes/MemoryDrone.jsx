@@ -11,6 +11,8 @@ import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
 const MemoryDrone = () => {
   const [carrusel, setCarrusel]= useState(1);
   const data= useData();
+  const [selectedThumbanil, setSelectedThumbnail]= useState("1");
+
 
 
   const handlePrev =()=>{
@@ -29,26 +31,48 @@ const MemoryDrone = () => {
     }
   };
 
+  const handleThumbnail= (e)=>{
+    console.log(e.target);
+    if(e.target.id == 'thumbnail1'){
+      setSelectedThumbnail("1");
+    }else if(e.target.id == 'thumbnail2'){;
+      setSelectedThumbnail("2");
+    }else if(e.target.id == 'thumbnail3'){
+      setSelectedThumbnail("3");
+    }
+  };
+
   if(data.dronTipe != null){
     return (
       <div className='container'>
         <Header />
-        <div className="main-container-element">
-          <Tittle_welcome text='Memorias para Grabación de Video y Fotografía' img='/iconos/fotografia.svg'/>
-          <CintaDescripcion img='/camaras-logos/dron-blanco.svg'
+        <Tittle_welcome text='Memorias para Grabación de Video y Fotografía' img='/iconos/fotografia.svg'/>
+        <CintaDescripcion img='/camaras-logos/dron-blanco.svg'
                             text='Drones'
-          />
+        />
+        <div className="main-container-element main-container-element__tipe2">
+          <section className="galeria">
+            <div className="galeria-thumbnails">
+              <img onClick={handleThumbnail} id='thumbnail1' src="/dron/thumbnails/1.jpg" alt="" className={selectedThumbanil== '1' ? 'galeria-thumbnail thumbnail-selected' : 'galeria-thumbnail'} />
+              <img onClick={handleThumbnail} id='thumbnail2' src="/dron/thumbnails/2.jpg" alt="" className={selectedThumbanil== '2' ? 'galeria-thumbnail thumbnail-selected' : 'galeria-thumbnail'} />
+              <img onClick={handleThumbnail} id='thumbnail3' src="/dron/thumbnails/3.jpg" alt="" className={selectedThumbanil== '3' ? 'galeria-thumbnail thumbnail-selected' : 'galeria-thumbnail'} />
+            </div>
+            <img src={`/dron/${selectedThumbanil}.jpg`} alt="" className="galeria-img" />
+          </section>
           <div className="drone-info-container">
             <div className="drone-memory-img__container">
-              <img className='drone-memory-img' src="/capacidades/32gb.svg" alt="" />
+              <img className='drone-memory-img' src={data.dronTipe== 1 ? '/memorias/PRO_256gb.png' : '/memorias/VG_64gb.png'} alt="" />
             </div>
             <div className="drone-description">
               <p className="drone-description-text">
                 La memoria ideal para tu dron <span className='bold'>{data.dronName}</span> es:
               </p>
               <div className="drone-capacity">
-                <img src="/capacidades/32gb.svg" alt="" />
-                <img src="/capacidades/64gb.svg" alt="" />
+                <img src={data.dronTipe== 1 ? '/capacidades/64gb.svg' : '/capacidades/32gb.svg'} alt="" />
+                <img src={data.dronTipe== 1 ? '/capacidades/128gb.svg' : '/capacidades/64gb.svg'} alt="" />
+                {(data.dronTipe== 1) && 
+                <img src="/capacidades/256gb.svg" alt="" />
+                }
               </div>
               <p className='memory-reference-drone'>{data.dronTipe== 1 ? 'HORIZONE PRO' : 'HORIZONE VIDEOGAMES'}</p>
             </div>
@@ -65,10 +89,13 @@ const MemoryDrone = () => {
     )
   }else if(data.dronTipe == null){
     return (
-      <main className='main-container'>
-        <Tittle_welcome text= "Memorias para almacenamiento de música" img='/iconos/fotografia.svg'/>
-        <div>ERROR</div>
-      </main>
+      <main className='container'>
+        <Header/>
+        <Tittle_welcome text='Memorias para Grabación de Video y Fotografía' img='/iconos/fotografia.svg'/>
+        <div className="error-container">
+          <p className="error-text">Parece que ha ocurrido un error, vuelve a llenar el <a href='/camaras/dron'>formulario</a>. Si el error persiste es porque no contamos con una memoria que se acomode a tus necesidades.</p>
+        </div>
+        </main>
     )
   }
 }

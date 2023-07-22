@@ -57,6 +57,9 @@ const Memory3 = () => {
           <img src={`/celular/${selectedThumbanil}.jpg`} alt="" className="galeria-img" />
         </section>
         <section className="memory-section">
+          <div className="img">
+            <img className='memory-img' src={data.reproductorVideojuegos ? "/memorias/VG_64gb.png": "/memorias/CL10_64gb.png"} alt="" />
+          </div>
           <div className="info-carrusel">
             <div className="info">
               <p>Te recomendamos las horizone micro sd de 32gb y 64gb para que no tengas que preocuparte por el espacio en tu celular.</p>

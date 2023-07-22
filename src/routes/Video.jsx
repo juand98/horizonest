@@ -91,7 +91,7 @@ const Video = () => {
           </section>
         </article>
       </form>
-      <Link to="/memoria-video" className="button_container" onClick={handleSubmit}>
+      <Link to="/memoria-video" className="button_container video-button" onClick={handleSubmit}>
           <AiOutlineSearch className="button-icon"/>
           <button type="submit">Encuentra mi memoria ideal</button>
         </Link>

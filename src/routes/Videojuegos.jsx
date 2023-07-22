@@ -99,7 +99,7 @@ const Videojuegos = () => {
         }
       </form>
       {formTipe &&
-        <Link to="/memoria-musica" className="button_container" onClick={handleSubmit}>
+        <Link to="/memoria-musica" className="button_container videojuegos-button" onClick={handleSubmit}>
             <AiOutlineSearch className="button-icon"/>
             <button type="submit">Encuentra mi memoria ideal</button>
         </Link>

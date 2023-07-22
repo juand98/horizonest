@@ -123,6 +123,15 @@ form{
 .drone-button{
   background-color: #649e;
 }
+.video-button{
+  background-color: #0070f7;
+}
+.celular-button{
+  background-color: #ff5824;
+}
+.videojuegos-button{
+  background-color: #2ec7ce;
+}
 @media (min-width: 900px){
   form{
       /* margin-top: 40px; */

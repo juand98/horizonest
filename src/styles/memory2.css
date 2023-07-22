@@ -57,8 +57,9 @@
 }
 .acordion-img{
     display: flex;
-    width: 100%;
-    height: 140px;
+    /* width: 100%; */
+    margin: auto;
+    width: 280px;
     align-content: center;
 }
 .acordion-content__description{
@@ -132,5 +133,29 @@
         width: 100%;
         max-width: 450px;
         height: fit-content;
+    }
+    .acordion-section__tipe2{
+        display: grid;
+        align-items: start;
+        padding: 0;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 5px;
+        flex-direction: row;
+        width: 100%;
+        max-width: 950px;
+        min-height: 420px;
+        align-content: start;
+
+    }
+    .acordion-item{
+        height: 470px;
+    }
+    .acordion-section__seguridad .acordion-item{
+        height: fit-content;
+    }
+    .main-container-element__tipe2{
+        /* border: 1px solid white; */
+        width: 900px;
+        margin: auto;
     }
 }

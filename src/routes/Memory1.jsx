@@ -8,7 +8,33 @@ import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
 
 const Memory1 = () => {
   const data = useData();
-  const jsonData = useGetInformation("../json/musicJson.json");
+  const jsonData = {
+    "4gb": {
+      "alta": "550",
+      "media": "1000",
+      "baja": "2800"
+    },
+    "8gb": {
+      "alta": "1000",
+      "media": "2000",
+      "baja": "5600"
+    },
+    "16gb": {
+      "alta": "2000",
+      "media": "4500",
+      "baja": "11300"
+    },
+    "32gb": {
+      "alta": "4500",
+      "media": "9100",
+      "baja": "22700"
+    },
+    "64gb": {
+      "alta": "9100",
+      "media": "18200",
+      "baja": "45500"
+    }
+  };
   const [memory, setMemory] = useState(undefined);
   const [carrusel, setCarrusel]= useState(1);
 
@@ -81,13 +107,13 @@ const Memory1 = () => {
           </section>
           <section className="memory-section">
               <div className="img">
-                  <img className='memory-img' src={`/capacidades/${memory}.svg`} alt="" />
+                  <img className='memory-img' src={`/memorias/CL10_${memory}.png`} alt="" />
               </div>
               <div className="info-carrusel">
                 <div className="info">
                     <p>{`La memoria ideal para almacenar más de ${cantidad} canciones en calidad ${calidad} es:`}</p>
                     <div className="memory-data">
-                      <p className='memory-capacity'>{memory}</p>
+                      <img src={`/capacidades/${memory}.svg`} alt="" className="memory-capacity" />
                       <p className='memory-reference'>HORIZONE CLASS 10 / 2.0</p>
                     </div>
                 </div>
@@ -104,9 +130,12 @@ const Memory1 = () => {
     )
   }else{
     return (
-        <main className='main-container'>
+        <main className='container'>
+          <Header/>
           <Tittle_welcome text= "Memorias para almacenamiento de música" img='/iconos/musica.svg'/>
-          <div>ERROR</div>
+          <div className="error-container">
+            <p className="error-text">Parece que ha ocurrido un error, vuelve a llenar el <a href='/musica'>formulario</a>. Si el error persiste es porque no contamos con una memoria que se acomode a tus necesidades.</p>
+          </div>
         </main>
     )
   }

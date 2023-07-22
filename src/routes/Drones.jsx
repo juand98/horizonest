@@ -39,11 +39,12 @@ const Drones = () => {
   return (
     <div className='container'>
     <Header />
-    <div className="main-container-element">
-      <Tittle_welcome text='Memorias para Grabación de Video y Fotografía' img='/iconos/fotografia.svg'/>
-      <CintaDescripcion img='/camaras-logos/dron-blanco.svg'
+    <Tittle_welcome text='Memorias para Grabación de Video y Fotografía' img='/iconos/fotografia.svg'/>
+    <CintaDescripcion img='/camaras-logos/dron-blanco.svg'
                         text='Drones'
-      /> 
+    /> 
+    <div className="main-container-element">
+      
       <article className="question">
           <section className="text-container">
             <label htmlFor="canciones" className="text-container__ask-drone">
@@ -70,12 +71,12 @@ const Drones = () => {
             </select>
           </section>
         </article>
-        <div className="button-box-drone">
-            <Link className="button_container drone-button" onClick={handleSubmit}>
-            <AiOutlineSearch className="button-icon"/>
-            <button type="submit">Encuentra mi memoria ideal</button>
-            </Link>
-        </div>
+    </div>
+    <div className="button-box-drone">
+      <Link className="button_container drone-button" onClick={handleSubmit}>
+      <AiOutlineSearch className="button-icon"/>
+      <button type="submit">Encuentra mi memoria ideal</button>
+      </Link>
     </div>
   </div>
   )

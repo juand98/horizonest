@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState } from 'react'
 import useData from '../Hooks/useData'
 import { useNavigate } from 'react-router-dom'
 // import { Link } from 'react-router-dom'
@@ -8,12 +9,15 @@ import CintaDescripcion from '../components/CintaDescripcion'
 import AcordionLink from '../components/AcordionLink'
 import AcordionLinkItem from '../components/AcordionLinkItem'
 import {AiOutlineRight } from "react-icons/ai";
+import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
+
 
 
 
 const CamaraDeportiva = () => {
   const data= useData();
   const navigate= useNavigate();
+
 
   const handleClick =()=>{
     navigate('/camaras/camara-deportiva/memoria-camara-deportiva')
@@ -27,17 +31,17 @@ const CamaraDeportiva = () => {
   return (
     <div className='container'>
       <Header />
-      <div className="main-container-element">
-        <Tittle_welcome text='Memorias para Grabación de Video y Fotografía' img='/iconos/fotografia.svg'/>
-        <CintaDescripcion img='/camaras-logos/deportiva-blanco.svg'
+      <Tittle_welcome text='Memorias para Grabación de Video y Fotografía' img='/iconos/fotografia.svg'/>
+      <CintaDescripcion img='/camaras-logos/deportiva-blanco.svg'
                           text='Cámaras Deportivas'
-        />
+      />
+      <div className="main-container-element">
         <div className="text-container-element">
           <label className="text-container__ask-element-deportiva">
               Elige tu marca y modelo de cámara deportiva
           </label>
         </div>
-        <section className="acordion-section">
+        <section className="acordion-section acordion-section__tipe2">
           <AcordionLink title='GO PRO'>
             <AcordionLinkItem value='1' tipe='1'>Hero 11 Black</AcordionLinkItem>
             <AcordionLinkItem value='1' tipe='1'>Hero 10 Black</AcordionLinkItem>
@@ -55,6 +59,7 @@ const CamaraDeportiva = () => {
             <AcordionLinkItem value='1' tipe='1'>Osmo Action</AcordionLinkItem>
             <AcordionLinkItem value='1' tipe='1'>Action 2</AcordionLinkItem>
             <AcordionLinkItem value='1' tipe='1'>Osmo Action 3</AcordionLinkItem>
+            <AcordionLinkItem value='1' tipe='1'>Pocket 2</AcordionLinkItem>
           </AcordionLink>
 
           <div value='3' name='cámara genérica' onMouseOver={handleContext} onClick={handleClick} className="acordion-item">
@@ -63,7 +68,6 @@ const CamaraDeportiva = () => {
               <AiOutlineRight />
             </div>
           </div>
-
         </section>
       </div>
     </div>
