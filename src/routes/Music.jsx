@@ -3,7 +3,6 @@ import "../styles/Music.css";
 import Header from "../components/Header";
 import Tittle_welcome from "../components/Tittle_welcome";
 import useData from "../Hooks/useData";
-// import useGetInformation from "../../Hooks/useGetinformation"
 import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineSearch } from "react-icons/ai";
 

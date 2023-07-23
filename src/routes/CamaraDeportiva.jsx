@@ -1,15 +1,12 @@
 import React from 'react'
-import { useState } from 'react'
 import useData from '../Hooks/useData'
 import { useNavigate } from 'react-router-dom'
-// import { Link } from 'react-router-dom'
 import Header from '../components/Header'
 import Tittle_welcome from '../components/Tittle_welcome'
 import CintaDescripcion from '../components/CintaDescripcion'
 import AcordionLink from '../components/AcordionLink'
 import AcordionLinkItem from '../components/AcordionLinkItem'
 import {AiOutlineRight } from "react-icons/ai";
-import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
 
 
 

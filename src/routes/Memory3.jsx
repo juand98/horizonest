@@ -1,5 +1,5 @@
 import React from 'react'
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Tittle_welcome from '../components/Tittle_welcome'
 import useData from '../Hooks/useData'
 import "../styles/memory1.css";
