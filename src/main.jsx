@@ -1,7 +1,7 @@
 import React from "react";
 import Root from "./routes/Root";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {createHashRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import ErrorPage from "./error-page";
 import Music from "./routes/Music";
@@ -21,7 +21,7 @@ import CamaraProfesional from "./routes/CamaraProfesional";
 import Videojuegos from "./routes/Videojuegos";
 import MemoryVideojuegos from "./routes/MemoryVideojuegos";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <Root />,
@@ -90,6 +90,10 @@ const router = createBrowserRouter([
   {
     path: "/memoria-videojuegos",
     element: <MemoryVideojuegos />,
+  },
+  {
+    path: "/*",
+    element: <Root />,
   },
 ]);
 
