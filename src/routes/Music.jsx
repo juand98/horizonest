@@ -81,9 +81,9 @@ const Music = () => {
               onChange={handleSeleccionarCalidad}
             >
               <option value="">Elige una opción</option>
-              <option value="Alta">Alta (Hasta 320 kbps)</option>
-              <option value="Media">Media (Hasta 160 kbps)</option>
-              <option value="Baja">Baja (Hasta 64 Mbps)</option>
+              <option value="alta">Alta (Hasta 320 kbps)</option>
+              <option value="media">Media (Hasta 160 kbps)</option>
+              <option value="baja">Baja (Hasta 64 Mbps)</option>
             </select>
           </section>
         </article>

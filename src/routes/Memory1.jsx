@@ -4,6 +4,7 @@ import Tittle_welcome from '../components/Tittle_welcome';
 import "../styles/memory1.css";
 import Header from '../components/Header';
 import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
+import { Link } from 'react-router-dom';
 
 const Memory1 = () => {
   const data = useData();
@@ -36,14 +37,15 @@ const Memory1 = () => {
   };
   const [memory, setMemory] = useState(undefined);
   const [carrusel, setCarrusel]= useState(1);
+  const [kbps, setKbps]= useState("");
 
   const [selectedThumbanil, setSelectedThumbnail]= useState("1");
  
 
   const qualityFunctions = {
-    Alta: (array, cantidad) => array.find(e => parseInt(e[1].alta) >= cantidad),
-    Media: (array, cantidad) => array.find(e => parseInt(e[1].media) >= cantidad),
-    Baja: (array, cantidad) => array.find(e => parseInt(e[1].baja) >= cantidad)
+    alta: (array, cantidad) => array.find(e => parseInt(e[1].alta) >= cantidad),
+    media: (array, cantidad) => array.find(e => parseInt(e[1].media) >= cantidad),
+    baja: (array, cantidad) => array.find(e => parseInt(e[1].baja) >= cantidad)
   };
   
   let calidad = data.calidadCanciones;
@@ -59,6 +61,18 @@ const Memory1 = () => {
         }
     }catch{
         setMemory(undefined);
+    }
+
+    switch (calidad){
+      case "alta":
+        setKbps("320 kbps");
+        break;
+      case "media":
+        setKbps("160 kbps");
+        break;
+      case "baja":
+        setKbps("64 kbps");
+        break;
     }
 
   }, [data, jsonData]);
@@ -106,11 +120,11 @@ const Memory1 = () => {
           </section>
           <section className="memory-section">
               <div className="img">
-                  <img className='memory-img' src={`/memorias/CL10_${memory}.png`} alt="" />
+                  <img className='memory-img' src={`/memorias/CL10USB_${memory}.png`} alt="" />
               </div>
               <div className="info-carrusel">
                 <div className="info">
-                    <p>{`La memoria ideal para almacenar más de ${cantidad} canciones en calidad ${calidad} es:`}</p>
+                    <p>La memoria ideal para almacenar más de <span className="bold">{`${cantidad}`}</span> canciones en  <span className="bold">{` calidad ${calidad}`}</span> <span>{`(${kbps})`}</span> es:</p>
                     <div className="memory-data">
                       <img src={`/capacidades/${memory}.svg`} alt="" className="memory-capacity" />
                       <p className='memory-reference'>HORIZONE CLASS 10 / 2.0</p>
@@ -133,7 +147,7 @@ const Memory1 = () => {
           <Header/>
           <Tittle_welcome text= "Memorias para almacenamiento de música" img='/iconos/musica.svg'/>
           <div className="error-container">
-            <p className="error-text">Parece que ha ocurrido un error, vuelve a llenar el <a href='/musica'>formulario</a>. Si el error persiste es porque no contamos con una memoria que se acomode a tus necesidades.</p>
+            <p className="error-text">Parece que ha ocurrido un error, vuelve a llenar el <Link to={"/musica"}>formulario</Link>. Si el error persiste es porque no contamos con una memoria que se acomode a tus necesidades.</p>
           </div>
         </main>
     )

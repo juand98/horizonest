@@ -6,6 +6,7 @@ import CintaDescripcion from '../components/CintaDescripcion';
 import Tittle_welcome from '../components/Tittle_welcome';
 import '../styles/drone.css'
 import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
+import { Link } from 'react-router-dom';
 
 const MemoryProfesional = () => {
   const data= useData();
@@ -16,11 +17,7 @@ const MemoryProfesional = () => {
 
 
   useEffect(()=>{
-    if(data.profesionalName == 'Alpha 7'){
-      setMemory("PRO_64gb");
-    }else if(data.profesionalName == 'Alpha 7R II'){
-      setMemory("PRO_128gb");
-    }else if(data.profesionalTipe== 1){
+    if(data.profesionalTipe== 1){
       setMemory("VG_64gb");
     }else if(data.profesionalTipe== 2){
       setMemory("PRO_256gb");
@@ -79,20 +76,16 @@ const MemoryProfesional = () => {
               </div>
               <div className="drone-description">
                 <p className="drone-description-text">
-                  La memoria ideal para tu cámara <span className='bold'>{data.profesionalName}</span> es:
+                  La memoria ideal para tu cámara <span className='bold'>{data.marcaDispositivo}</span> <span className='bold'>{data.profesionalName}</span> es:
                 </p>
                 <div className="drone-capacity">
                   <img src={data.profesionalTipe== 1 ? '/capacidades/32gb.svg' : '/capacidades/64gb.svg'} alt="" />
-                  {
-                    data.profesionalName != 'Alpha 7' && 
-                    <img src={data.profesionalTipe== 1 ? '/capacidades/64gb.svg' : '/capacidades/128gb.svg'} alt="" />
-                  }
-                  {
-                    (data.profesionalName != 'Alpha 7' && data.profesionalTipe == 2 && data.profesionalName!= 'Alpha 7R II') && 
-                    <img src="/capacidades/256gb.svg" alt="" />
+                  <img src={data.profesionalTipe== 1 ? '/capacidades/64gb.svg' : '/capacidades/128gb.svg'} alt="" />
+                  {data.profesionalTipe == 2 &&
+                  <img src='/capacidades/256gb.svg'></img>
                   }
                 </div>
-                <p className='memory-reference-drone'>{data.profesionalTipe== 1 ? 'HORIZONE VIDEO GAME' : 'HORIZONE PRO'}</p>
+                <p className='memory-reference-drone'>{data.profesionalTipe== 1 ? 'HORIZONE VIDEO GAMES' : 'HORIZONE PRO'}</p>
               </div>
               <div className="carrusel-container__element">
                 <div className="carrusel-element">
@@ -111,7 +104,7 @@ const MemoryProfesional = () => {
         <Header/>
         <Tittle_welcome text='Memorias para Grabación de Video y Fotografía' img='/iconos/fotografia.svg'/>
         <div className="error-container">
-          <p className="error-text">Parece que ha ocurrido un error, vuelve a llenar el <a href='/camaras/camara-profesional'>formulario</a>. Si el error persiste es porque no contamos con una memoria que se acomode a tus necesidades.</p>
+          <p className="error-text">Parece que ha ocurrido un error, vuelve a llenar el <Link to={'/camaras/camara-profesional'}>formulario</Link>. Si el error persiste es porque no contamos con una memoria que se acomode a tus necesidades.</p>
         </div>
       </main>
   )

@@ -9,22 +9,22 @@ const MemoryVideojuegos = () => {
   const data = useData();
   const jsonData = {
     "PSP": {
-      "24 a 48 juegos": false,
+      "24 a 48 juegos": "VG_32gb",
       "48 a 96 juegos": "VG_32gb",
       "96 a 190 juegos": "VG_64gb"
     },
     "PSP Go": {
-      "24 a 48 juegos": false,
+      "24 a 48 juegos": "VG_32gb",
       "48 a 96 juegos": "VG_32gb",
       "96 a 190 juegos": "VG_64gb"
     },
     "PSVITA": {
       "24 a 48 juegos": "VG_64gb",
       "48 a 96 juegos": "PRO_128gb",
-      "96 a 190 juegos": false
+      "96 a 190 juegos": "PRO_256gb"
     },
     "Nintendo 3DS": {
-      "8 a 16 juegos": false,
+      "8 a 16 juegos": "VG_32gb",
       "16 a 32 juegos": "VG_32gb",
       "32 a 64 juegos": "VG_64gb"
     },
@@ -34,9 +34,9 @@ const MemoryVideojuegos = () => {
       "32 a 64 juegos": "PRO_256gb"
     },
     "PS2": {
-      "8 a 16 juegos": false,
-      "16 a 32 juegos": "VG_32gb",
-      "32 a 64 juegos": "VG_64gb"
+      "8 a 16 juegos": "USB",
+      "16 a 32 juegos": "USB",
+      "32 a 64 juegos": "USB"
     }
 };
   const [memoria, setMemoria]= useState("");
@@ -64,10 +64,10 @@ const MemoryVideojuegos = () => {
   useEffect(() => {
     switch (memoria){
       case "VG_32gb":
-        setMemoriaNombre("VIDEOGAME 32GB");
+        setMemoriaNombre("VIDEOGAMES 32GB");
         break;
       case "VG_64gb":
-        setMemoriaNombre("VIDEOGAME 64GB");
+        setMemoriaNombre("VIDEOGAMES 64GB");
         break;
       case "PRO_128gb":
         setMemoriaNombre("PRO 128GB");
@@ -78,6 +78,17 @@ const MemoryVideojuegos = () => {
       case "PRO_256gb":
         setMemoriaNombre("PRO 256GB");
         break;
+      case "USB":
+        if(cantidad == '8 a 16 juegos'){
+          setMemoriaNombre("VIDEOGAMES 32GB");
+          break;
+        }else if(cantidad == '16 a 32 juegos'){
+          setMemoriaNombre("VIDEOGAMES 32GB");
+          break;
+        }else if(cantidad == '32 a 64 juegos'){
+          setMemoriaNombre("VIDEOGAMES 64GB");
+          break;
+        }
     }
     
   }, [memoria]);
@@ -129,9 +140,8 @@ const MemoryVideojuegos = () => {
                   </div>
                   <div className="info-carrusel">
                     <div className="info">
-                        <p>{`La memoria ideal para almacenar de ${cantidad} en tu consola ${consola} es la:`}</p>
+                        <p>La memoria ideal para almacenar <span className="bold">{`de ${cantidad}`}</span> en tu consola <span className="bold">{`${consola}`}</span> es la:</p>
                         <div className="memory-data">
-                          <p className='memory-capacity'></p>
                           <p className='memory-reference'> HORIZONE {memoriaNombre}</p>
                         </div>
                     </div>

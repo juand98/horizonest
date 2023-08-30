@@ -17,6 +17,7 @@ const CamaraDeportiva = () => {
 
 
   const handleClick =()=>{
+    data.marcaDispositivo= null;
     navigate('/camaras/camara-deportiva/memoria-camara-deportiva')
   };
 
@@ -24,6 +25,7 @@ const CamaraDeportiva = () => {
     data.deportivaTipe= parseInt(e.currentTarget.getAttribute('value'));
     data.deportivaName= e.currentTarget.getAttribute('name');
   };
+
 
   return (
     <div className='container'>
@@ -45,6 +47,7 @@ const CamaraDeportiva = () => {
             <AcordionLinkItem value='1' tipe='1'>Hero 10 Black Bones</AcordionLinkItem>
             <AcordionLinkItem value='2' tipe='1'>Hero 9</AcordionLinkItem>
             <AcordionLinkItem value='2' tipe='1'>Hero 8</AcordionLinkItem>
+            <AcordionLinkItem value='2' tipe='1'>Hero 7</AcordionLinkItem>
             <AcordionLinkItem value='2' tipe='1'>Hero 6</AcordionLinkItem>
             <AcordionLinkItem value='2' tipe='1'>Hero 5</AcordionLinkItem>
             <AcordionLinkItem value='3' tipe='1'>Hero 4</AcordionLinkItem>

@@ -83,9 +83,9 @@ const Video = () => {
               onChange={handleSeleccionarCalidad}
             >
               <option value="">Elige una opción</option>
-              <option value="1080P">1080P (Full HD)</option>
-              <option value="720P">720P (HD)</option>
-              <option value="480P">480P</option>
+              <option value="1080 Full HD">1080P (Full HD)</option>
+              <option value="720 HD">720P (HD)</option>
+              <option value="480 P">480P</option>
             </select>
           </section>
         </article>

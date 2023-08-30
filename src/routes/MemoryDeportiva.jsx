@@ -6,6 +6,7 @@ import CintaDescripcion from '../components/CintaDescripcion';
 import Tittle_welcome from '../components/Tittle_welcome';
 import '../styles/drone.css'
 import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
+import { Link } from 'react-router-dom';
 
 const MemoryDeportiva = () => {
     const data= useData();
@@ -65,7 +66,7 @@ const MemoryDeportiva = () => {
                 </div>
                 <div className="drone-description">
                   <p className="drone-description-text">
-                    La memoria ideal para tu <span className='bold'>{data.deportivaName}</span> es:
+                    La memoria ideal para tu <span className='bold'>{data.marcaDispositivo} </span><span className='bold'>{data.deportivaName}</span> es:
                   </p>
                   <div className="drone-capacity">
                     <img src={data.deportivaTipe== 1 ? '/capacidades/64gb.svg' : (data.deportivaTipe== 2 ? '/capacidades/32gb.svg' : '/capacidades/32gb.svg')} alt="" />
@@ -93,7 +94,7 @@ const MemoryDeportiva = () => {
         <Header/>
         <Tittle_welcome text='Memorias para Grabación de Video y Fotografía' img='/iconos/fotografia.svg'/>
         <div className="error-container">
-          <p className="error-text">Parece que ha ocurrido un error, vuelve a llenar el <a href='/camaras/camara-deportiva'>formulario</a>. Si el error persiste es porque no contamos con una memoria que se acomode a tus necesidades.</p>
+          <p className="error-text">Parece que ha ocurrido un error, vuelve a llenar el <Link to={'/camaras/camara-deportiva'}>formulario</Link>. Si el error persiste es porque no contamos con una memoria que se acomode a tus necesidades.</p>
         </div>
         </main>
     )

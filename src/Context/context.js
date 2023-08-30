@@ -14,6 +14,9 @@ const context = createContext({
   profesionalName: null,
   consolaVideojuegos: null,
   cantidadVideojuegos: null,
+
+  marcaDispositivo: null,
+
 });
 
 export default context;

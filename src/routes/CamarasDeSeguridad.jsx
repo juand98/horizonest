@@ -26,7 +26,7 @@ const AcordionItem = (props) => {
         <div className="acordion-content__description">
           <p className="acordion-content__text">La memoria ideal para grabar entre <span className='bold'>{props.dias} días</span> es:</p>
           <img src={`/capacidades/${props.gb}gb.svg`} alt="" className="acordion-content__capacity" />
-          <p className="acordion-content__reference">HORIZONE CLASS 10 / 2.0</p>
+          <p className="acordion-content__reference">HORIZONE CLASS 10</p>
         </div>
       </div>
       }

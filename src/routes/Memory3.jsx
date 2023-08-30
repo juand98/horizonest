@@ -62,7 +62,7 @@ const Memory3 = () => {
           </div>
           <div className="info-carrusel">
             <div className="info">
-              <p>Te recomendamos las horizone micro sd de 32gb y 64gb para que no tengas que preocuparte por el espacio en tu celular.</p>
+              <p>Te recomendamos las <span className="bold">horizone micro sd de 32gb y 64gb</span> para que no tengas que preocuparte por el espacio en tu celular.</p>
               <div className="memory-data">
                 <div className="img-section">
                   <img className='memory-img--celular' src="/capacidades/32gb.svg" alt="" />

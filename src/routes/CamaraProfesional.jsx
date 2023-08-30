@@ -23,6 +23,7 @@ const CamaraProfesional = () => {
         <section className="acordion-section acordion-section__tipe2">
           <AcordionLink title='SONY'>
             <AcordionLinkItem value='1' tipe='2' >Semi Profesional</AcordionLinkItem>
+            <AcordionLinkItem value='2' tipe='2' >ZV - 1F</AcordionLinkItem>
             <AcordionLinkItem value='2' tipe='2'>Alpha A6400</AcordionLinkItem>
             <AcordionLinkItem value='2' tipe='2'>Alpha A6600</AcordionLinkItem>
             <AcordionLinkItem value='2' tipe='2'>Alpha 7</AcordionLinkItem>

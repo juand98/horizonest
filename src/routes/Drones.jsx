@@ -58,9 +58,12 @@ const Drones = () => {
             >
               <option value="">Elige una opción</option>
               <option value="2">DRONES AMATEUR</option>
+              <option value="1">DRONES 4K</option>
+              <option value="1">DJI MINI 2 SE</option>
               <option value="1">DJI MINI 2</option>
               <option value="1">DJI AIR 2 S</option>
-              <option value="1">DJI MINI 2</option>
+              <option value="1">DJI MINI 3</option>
+              <option value="1">DJI MINI 3 PRO</option>
               <option value="1">DJI MINI SE</option>
               <option value="1">DJI AVATA</option>
               <option value="1">DJI MAVIC 3 CLASSIC</option>

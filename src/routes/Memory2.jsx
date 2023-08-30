@@ -5,35 +5,36 @@ import Tittle_welcome from '../components/Tittle_welcome';
 import "../styles/memory1.css";
 import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
 import Header from '../components/Header';
+import { Link } from 'react-router-dom';
 
 
 const Memory2 = () => {
   const data = useData();
   const jsonData = {
     "4gb": {
-      "1080P": "1",
-      "720P": "2",
-      "480P": "4"
+      "1080 Full HD": "1",
+      "720 HD": "2",
+      "480 P": "4"
     },
     "8gb": {
-      "1080P": "2",
-      "720P": "4",
-      "480P": "8"
+      "1080 Full HD": "2",
+      "720 HD": "4",
+      "480 P": "8"
     },
     "16gb": {
-      "1080P": "5",
-      "720P": "9",
-      "480P": "16"
+      "1080 Full HD": "5",
+      "720 HD": "9",
+      "480 P": "16"
     },
     "32gb": {
-      "1080P": "9",
-      "720P": "17",
-      "480P": "32"
+      "1080 Full HD": "9",
+      "720 HD": "17",
+      "480 P": "32"
     },
     "64gb": {
-      "1080P": "19",
-      "720P": "34",
-      "480P": "64"
+      "1080 Full HD": "19",
+      "720 HD": "34",
+      "480 P": "64"
     }
   };
   const [memory, setMemory] = useState(undefined);
@@ -43,9 +44,9 @@ const Memory2 = () => {
 
 
   const qualityFunctions = {
-    "1080P": (array, cantidad) => array.find(e => parseInt(e[1]['1080P']) >= cantidad),
-    "720P": (array, cantidad) => array.find(e => parseInt(e[1]['720P']) >= cantidad),
-    "480P": (array, cantidad) => array.find(e => parseInt(e[1]['480P']) >= cantidad)
+    "1080 Full HD": (array, cantidad) => array.find(e => parseInt(e[1]['1080 Full HD']) >= cantidad),
+    "720 HD": (array, cantidad) => array.find(e => parseInt(e[1]['720 HD']) >= cantidad),
+    "480 P": (array, cantidad) => array.find(e => parseInt(e[1]['480 P']) >= cantidad)
   };
   
   let calidad = data.calidadVideos;
@@ -108,11 +109,11 @@ const Memory2 = () => {
           </section>
           <section className="memory-section">
               <div className="img">
-                  <img className='memory-img' src={`/memorias/CL10_${memory}.png`} alt="" />
+                  <img className='memory-img' src={`/memorias/CL10USB_${memory}.png`} alt="" />
               </div>
               <div className="info-carrusel">
                 <div className="info">
-                    <p>{`La memoria ideal para almacenar más de ${cantidad} videos en calidad ${calidad} es:`}</p>
+                    <p>La memoria ideal para almacenar <span className="bold">{`más de ${cantidad} videos`}</span>  en calidad <span className="bold">{`${calidad}`}</span> es:</p>
                     <img src={`/capacidades/${memory}.svg`} alt="" className="memory-capacity" />
                     <p>HORIZONE CLASS 10 / 2.0</p>
                 </div>
@@ -132,7 +133,7 @@ const Memory2 = () => {
       <Header/>
       <Tittle_welcome text= "Memorias para almacenamiento de video" img='/iconos/video.svg'/>
       <div className="error-container">
-        <p className="error-text">Parece que ha ocurrido un error, vuelve a llenar el <a href='/video'>formulario</a>. Si el error persiste es porque no contamos con una memoria que se acomode a tus necesidades.</p>
+        <p className="error-text">Parece que ha ocurrido un error, vuelve a llenar el <Link to={'/video'}>formulario</Link>. Si el error persiste es porque no contamos con una memoria que se acomode a tus necesidades.</p>
       </div>
     </main>
     )

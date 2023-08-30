@@ -6,6 +6,7 @@ import CintaDescripcion from '../components/CintaDescripcion';
 import Tittle_welcome from '../components/Tittle_welcome';
 import '../styles/drone.css'
 import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
+import { Link } from 'react-router-dom';
 
 
 const MemoryDrone = () => {
@@ -93,7 +94,7 @@ const MemoryDrone = () => {
         <Header/>
         <Tittle_welcome text='Memorias para Grabación de Video y Fotografía' img='/iconos/fotografia.svg'/>
         <div className="error-container">
-          <p className="error-text">Parece que ha ocurrido un error, vuelve a llenar el <a href='/camaras/dron'>formulario</a>. Si el error persiste es porque no contamos con una memoria que se acomode a tus necesidades.</p>
+          <p className="error-text">Parece que ha ocurrido un error, vuelve a llenar el <Link to={'/camaras/dron'}>formulario</Link>. Si el error persiste es porque no contamos con una memoria que se acomode a tus necesidades.</p>
         </div>
         </main>
     )
