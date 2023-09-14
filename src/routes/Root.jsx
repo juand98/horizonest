@@ -36,6 +36,9 @@ const Root = () => {
               </Link>
             </section>
           </div>
+          <a href="http://wa.link/igfq8i" target="_BLANK" className="whatsapp-button">
+            <img src="/whatsApp-icon.svg"></img>
+          </a>
         </main>
       </context.Provider>
     </>

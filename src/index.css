@@ -28,6 +28,18 @@ html {
   gap: 10px;
 }
 
+.whatsapp-button{
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  bottom: 30px;
+  right: 10px;
+}
+
+.whatsapp-button img{
+  width: 60px;
+}
+
 .body_container .question {
   /* margin-top: 2.5rem; */
   /* margin-bottom: 2.5rem; */
