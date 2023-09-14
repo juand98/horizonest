@@ -66,7 +66,7 @@ const MemoryDeportiva = () => {
                 </div>
                 <div className="drone-description">
                   <p className="drone-description-text">
-                    La memoria ideal para tu <span className='bold'>{data.marcaDispositivo} </span><span className='bold'>{data.deportivaName}</span> es:
+                    La memoria ideal para tu cámara <span className='bold'>{data.marcaDispositivo} </span><span className='bold'>{data.deportivaName}</span> es:
                   </p>
                   <div className="drone-capacity">
                     <img src={data.deportivaTipe== 1 ? '/capacidades/64gb.svg' : (data.deportivaTipe== 2 ? '/capacidades/32gb.svg' : '/capacidades/32gb.svg')} alt="" />

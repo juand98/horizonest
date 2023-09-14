@@ -76,7 +76,7 @@ const MemoryProfesional = () => {
               </div>
               <div className="drone-description">
                 <p className="drone-description-text">
-                  La memoria ideal para tu cámara <span className='bold'>{data.marcaDispositivo}</span> <span className='bold'>{data.profesionalName}</span> es:
+                  La memoria ideal para capturar fotos y videos con tu <span className='bold'>{data.marcaDispositivo}</span> <span className='bold'>{data.profesionalName}</span> es:
                 </p>
                 <div className="drone-capacity">
                   <img src={data.profesionalTipe== 1 ? '/capacidades/32gb.svg' : '/capacidades/64gb.svg'} alt="" />
